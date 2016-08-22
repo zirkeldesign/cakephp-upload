@@ -1,6 +1,8 @@
 Installation
 ------------
 
+The only officialy supported method of installing this plugin is via composer.
+
 Using `Composer <http://getcomposer.org/>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,8 +45,7 @@ In your *app directory* type:
 	git submodule init
 	git submodule update
 
-GIT Clone
-~~~~~~~~~
+.. code::
 
 In your ``Plugin`` directory type:
 
@@ -75,14 +76,14 @@ If you cannot install Imagick, instead configure the plugin with
 ``'thumbnailMethod'  => 'php'`` in the files options.
 
 Enable plugin
--------------
+~~~~~~~~~~~~~
 
-You need to enable the plugin your ``app/Config/bootstrap.php`` file:
+You need to enable the plugin your ``config/bootstrap.php`` file:
 
 .. code:: php
 
 	<?php
 	CakePlugin::load('Upload');
 
-If you are already using ``CakePlugin::loadAll();``, then this is not
+If you are already using ``Plugin::loadAll();``, then this is not
 necessary.
