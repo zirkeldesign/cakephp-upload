@@ -1161,10 +1161,9 @@ class UploadBehavior extends ModelBehavior
     protected function _updateRecord(Model $model, $data)
     {
         if (!empty($data[$model->alias])) {
-            // $model->updateAll($data[$model->alias], array(
-            //     $model->alias . '.' . $model->primaryKey => $model->id,
-            // ));
-            $model->save($data[$model->alias], ['callbacks'=>false]);
+            $model->updateAll($data[$model->alias], [
+                $model->alias . '.' . $model->primaryKey => $model->id,
+            ]);
         }
     }
 
